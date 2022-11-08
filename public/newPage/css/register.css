@@ -1,0 +1,31 @@
+#register {
+    display: flex;
+    align-items: center;
+    border: 1px solid #fffefec4;
+    height: 55rem;
+    box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 20px 20px;
+}
+
+span {
+    font-style: italic;
+    font-weight: 100;
+
+}
+
+
+.col-sm-6:first-child {
+    padding: 145px 15px;
+    border-right: 2px solid #c5c5c5;
+}
+
+.col-sm-6:last-child {
+
+    width: calc(50% - 150px);
+    margin: 0 auto;
+}
+
+.col-md-2>a {
+    color: black;
+    text-decoration: none;
+}
