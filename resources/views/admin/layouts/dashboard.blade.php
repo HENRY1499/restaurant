@@ -8,8 +8,14 @@
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.72.0">
     <title>Doña Pitty</title>
-    <link rel="stylesheet" href="{{asset('admin/css/styles.css')}}">
     <link rel="canonical" href="https://v5.getbootstrap.com/docs/5.0/examples/album/">
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="{{asset('admin/css/all.min.css')}}">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="{{asset('admin/css/adminlte.min.css')}}">
 
 
 
@@ -22,13 +28,21 @@
 
 <body>
 
-
-    <div class="container">
+    <div id="app">
         @yield('content')
-        <h1>Hola, soy el nuevo usuario administrador</h1>
-        <button class="btn btn-danger"><a href="{{route('user.logout')}}">Salir</a></button>
     </div>
 
+    @vite('resources/js/app.js')
+
+
+    <!-- jQuery -->
+    <script src="{{asset('admin/js/jquery.min.js')}}"></script>
+    <!-- Bootstrap 4 -->
+    <script src="{{asset('admin/js/bootstrap.bundle.min.js')}}"></script>
+    <!-- AdminLTE App -->
+    <script src="{{asset('admin/js/adminlte.min.js')}}"></script>
+    <!-- AdminLTE for demo purposes -->
+    <script src="{{asset('admin/js/demo.js')}}"></script>
 
 
 </body>

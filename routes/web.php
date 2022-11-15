@@ -42,7 +42,7 @@ Route::get('logout', [AuthController::class, 'logout'])->name('salir');
 /**USUARIOS */
 Route::group(['middleware' => ['AuthUsuarios']], function () {
 
-    Route::get('dashboard', [UsuarioController::class, 'dashboard'])->name('admin.dashboard');
+    Route::get('dashboard/{n1?}/{n2?}', [UsuarioController::class, 'dashboard'])->name('admin.dashboard');
     Route::get('user/login', [UsuarioController::class, 'login'])->name('user.login');
     Route::get('user/register', [UsuarioController::class, 'register'])->name('user.register');
 });

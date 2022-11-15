@@ -10,7 +10,7 @@
     <title>Doña Pitty</title>
     <link rel="stylesheet" href="{{asset('newPage/css/register.css')}}">
     <link rel="canonical" href="https://v5.getbootstrap.com/docs/5.0/examples/album/">
-
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 
 
     <!-- Bootstrap core CSS -->
