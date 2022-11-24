@@ -23,7 +23,7 @@ class cliente extends Model
         'created_at'
     ];
 
-    public function reservaMesas()
+    public function reserva()
     {
         return $this->hasMany(Reserva::class);
     }

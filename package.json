@@ -14,7 +14,10 @@
     },
     "dependencies": {
         "@oruga-ui/oruga-next": "^0.5.8",
-        "vue": "^3.2.41",
+        "bootstrap": "^5.2.3",
+        "bootstrap-vue": "^2.23.1",
+        "vue": "^3.2.45",
+        "vue-axios": "^3.5.2",
         "vue-loader": "^17.0.1",
         "vue-resource": "^1.5.3",
         "vue-router": "^4.1.6"

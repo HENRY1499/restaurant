@@ -40,7 +40,8 @@ class UsuarioController extends Controller
         // Validar Peticiones
         $request->validate([
             'correo' => 'required|email|unique:usuarios',
-            'contraseña' => 'required|min:5|max:10'
+            'contraseña' => 'required|min:5|max:10',
+            'imagen' => 'required'
         ]);
 
         // INSERTAR DATOS EN LA BASE DE DATOS
@@ -48,6 +49,7 @@ class UsuarioController extends Controller
 
         $usuarios->correo = $request->correo;
         $usuarios->contraseña = Hash::make($request->contraseña);
+        $usuarios->imagen = $request->imagen;
 
         $save = $usuarios->save();
 
@@ -77,7 +79,7 @@ class UsuarioController extends Controller
         } else {
             if (Hash::check($request->contraseña, $usuariosInfo->contraseña)) {
                 $request->session()->put('AdminLogged', $usuariosInfo->id_usuario);
-                return redirect('dashboard');
+                return redirect('app');
             } else {
                 return back()->with('fail', 'Contraseña Incorrecta');
             }
@@ -90,9 +92,9 @@ class UsuarioController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function dashboard()
+    public function app()
     {
-        return view('admin.layouts.dashboard');
+        return view('admin.layouts.app');
     }
 
     /**

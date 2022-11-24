@@ -9,7 +9,7 @@ class Carta extends Model
 {
     use HasFactory;
     protected $table = 'carta';
-    public $timestamps = false;
+    public $timestamps = 'false';
     protected $fillable = ['fecha', 'id_usuario'];
     protected $hidden = ['updated_at', 'created_at'];
 

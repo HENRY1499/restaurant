@@ -11,6 +11,7 @@ class MenuTipo extends Model
     public $timestamps = 'false';
     protected $table = 'menutipo';
     protected $fillable = [
+        'id_plato',
         'id_turno',
         'id_tipo'
     ];
@@ -22,9 +23,9 @@ class MenuTipo extends Model
     {
         return $this->belongsTo(Tipo::class, 'id_tipo', 'id_tipo');
     }
-    public function platosmenus()
+    public function platos()
     {
-        return $this->hasMany(PlatoMenu::class);
+        return $this->belongsTo(Platos::class, 'id_plato', 'id_plato');
     }
     public function cartadetalles()
     {

@@ -1,11 +1,11 @@
 <template>
     <div>
-        
+        <h1>editar en reservas</h1>
     </div>
 </template>
 <script>
 export default{
-    name:'mesas',
+    name:'editarReserva',
     data(){
         return{
             

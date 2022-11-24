@@ -23,6 +23,10 @@
             <label for="contraseña" class="form-label">Contraseña:</label>
             <input type="password" class="form-control" id="contraseña" placeholder="Contraseña" name="contraseña" required>
         </div>
+        <div class="col-md-12  mb-3">
+            <label for="contraseña" class="form-label">Imagen:</label>
+            <input type="text" class="form-control" id="imagen" placeholder="Imagen" name="imagen" required>
+        </div>
         <div>
             <button class="btn btn-block btn-success" type="submit">Registrarse</button>
         </div>

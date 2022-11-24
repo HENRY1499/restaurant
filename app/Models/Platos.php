@@ -8,21 +8,27 @@ use Illuminate\Database\Eloquent\Model;
 class Platos extends Model
 {
     use HasFactory;
-    public $timestamps = 'platos';
+    public $timestamps = 'false';
     protected $table = 'platos';
     protected $fillable = [
-        'id_foto',
+        'imagen',
         'nombre',
         'descripcion',
         'precio'
+    ];
+    protected $hidden = [
+        'updated_at',
+        'created_at'
     ];
 
     public function platomenus()
     {
         return $this->hasMany(PlatoMenu::class);
     }
-    public function fotos()
+
+
+    public function menutipo()
     {
-        return $this->belongsTo(Fotos::class, 'id_foto', 'id_foto');
+        return $this->hasMany(PlatoMenu::class);
     }
 }

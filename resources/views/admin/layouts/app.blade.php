@@ -16,8 +16,8 @@
     <link rel="stylesheet" href="{{asset('admin/css/all.min.css')}}">
     <!-- Theme style -->
     <link rel="stylesheet" href="{{asset('admin/css/adminlte.min.css')}}">
-
-
+    <!-- DataTables -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.1/css/dataTables.bootstrap5.min.css">
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
@@ -29,21 +29,33 @@
 <body>
 
     <div id="app">
-        @yield('content')
+
     </div>
+    <li class="nav-item">
+        <a href="{{route('user.logout')}}" class="nav-link">
+            <p>Salir</p>
+        </a>
+    </li>
 
     @vite('resources/js/app.js')
 
 
-    <!-- jQuery -->
+
     <script src="{{asset('admin/js/jquery.min.js')}}"></script>
     <!-- Bootstrap 4 -->
     <script src="{{asset('admin/js/bootstrap.bundle.min.js')}}"></script>
     <!-- AdminLTE App -->
     <script src="{{asset('admin/js/adminlte.min.js')}}"></script>
-    <!-- AdminLTE for demo purposes -->
-    <script src="{{asset('admin/js/demo.js')}}"></script>
-
+    <!-- DataTables -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.1/js/dataTables.bootstrap5.min.js"></script>
+    <!-- jQuery -->
+    <script>
+        $(document).ready(function() {
+            $('#plato').DataTable();
+        });
+    </script>
 
 </body>
 

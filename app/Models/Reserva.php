@@ -10,11 +10,17 @@ class Reserva extends Model
     use HasFactory;
     public $timestamps = 'false';
     protected $table = 'reservamesas';
+    protected $casts = [
+        'id_cliente' => 'int',
+        'id_mesa' => 'int'
+    ];
     protected $fillable = [
         'id_cliente',
         'id_mesa',
         'hora',
-        'fecha'
+        'fecha',
+        'invitados',
+        'comentario'
     ];
 
     public function cliente()

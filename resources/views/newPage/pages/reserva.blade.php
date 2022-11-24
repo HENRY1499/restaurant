@@ -3,7 +3,7 @@
 <div class="container">
     <ul>
         @foreach($reservas as $reserva)
-        <li style="color: black;">{{$reserva->id_reserva}}</li>
+        <li style="color: black">{{$reserva->id_reserva}}</li>
         <p>{{$reserva->cliente->nombres}}</p>
         <p>{{$reserva->cliente->apellidos}}</p>
         <p>{{$reserva->cliente->dni}}</p>

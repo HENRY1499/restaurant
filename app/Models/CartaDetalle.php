@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class CartaDetalle extends Model
 {
     use HasFactory;
-    public $timestamps = false;
+    public $timestamps = 'false';
     protected $table = 'cartadetalle';
     protected $fillable = [
         'id_menutipo',

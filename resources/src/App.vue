@@ -1,5 +1,4 @@
 <template>
- 
  <div class="wrapper">
         <!-- Navbar -->
         <nav class="main-header navbar navbar-expand navbar-white navbar-light">
@@ -38,8 +37,53 @@
                         <a href="#" class="d-block">Henry Daniel</a>
                     </div>
                 </div>
+                <div >
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
 
-              <navbar-component></navbar-component>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <router-link to="/inicio">Inicio</router-link>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <router-link to="/platos">Platos</router-link>
+                </a>
+            </li>
+            
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <router-link to="/estado">Estado</router-link>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <router-link to="/menus">Menú</router-link>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <router-link to="/mesas">Mesas</router-link>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <router-link to="/reservas">Reservas</router-link>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <router-link to="/usuarios">Usuarios</router-link>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="{{route('user.logout')}}" class="nav-link">
+                    <p>Salir</p>
+                </a>
+            </li>
+        </ul>   
+    </div>
                 <!-- /.sidebar-menu -->
             </div>
             <!-- /.sidebar -->
@@ -66,14 +110,7 @@
  
 </template>
 
-<script>
-import NavbarComponent from '../src/components/NavbarComponent.vue';
+<script setup>
 
-export default{
-  name:'App',
-  components:{
-    NavbarComponent
-  }
-}
 
 </script>
